@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="gitignore" />
+  </Folder>
+  <Project Path="InventoryManager.App/InventoryManager.App.csproj" />
+  <Project Path="InventoryManager.Core/InventoryManager.Core.csproj" />
+  <Project Path="InventoryManager.Data/InventoryManager.Data.csproj" />
+  <Project Path="InventoryManager.Services/InventoryManager.Services.csproj" />
+  <Project Path="InventoryManager.Tests/InventoryManager.Tests.csproj" />
+</Solution>
