@@ -81,6 +81,7 @@ namespace InventoryManager.App.Helpers
         {
             if (sender is ComboBox comboBox)
             {
+                comboBox.ApplyTemplate();
                 AttachToEditableTextBox(comboBox);
                 UpdatePlaceholder(comboBox);
             }

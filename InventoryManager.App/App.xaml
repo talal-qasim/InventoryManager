@@ -4,29 +4,36 @@
              xmlns:vm="clr-namespace:InventoryManager.App.ViewModels"
              xmlns:views="clr-namespace:InventoryManager.App.Views">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type vm:DashboardViewModel}">
-            <views:DashboardView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:ProductsViewModel}">
-            <views:ProductsView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:CategoriesViewModel}">
-            <views:CategoriesView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:SuppliersViewModel}">
-            <views:SuppliersView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:PurchasesViewModel}">
-            <views:PurchasesView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:SalesViewModel}">
-            <views:SalesView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:ReportsViewModel}">
-            <views:ReportsView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
-            <views:SettingsView/>
-        </DataTemplate>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/Controls.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type vm:DashboardViewModel}">
+                <views:DashboardView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:ProductsViewModel}">
+                <views:ProductsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:CategoriesViewModel}">
+                <views:CategoriesView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:SuppliersViewModel}">
+                <views:SuppliersView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:PurchasesViewModel}">
+                <views:PurchasesView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:SalesViewModel}">
+                <views:SalesView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:ReportsViewModel}">
+                <views:ReportsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+                <views:SettingsView/>
+            </DataTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

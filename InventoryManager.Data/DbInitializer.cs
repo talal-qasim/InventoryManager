@@ -21,8 +21,13 @@ public static class DbInitializer
                 PasswordSalt = salt,
                 IsActive = true
             });
-
-            await context.SaveChangesAsync();
         }
+
+        if (!await context.AppSettings.AnyAsync())
+        {
+            context.AppSettings.Add(new AppSettings());
+        }
+
+        await context.SaveChangesAsync();
     }
 }

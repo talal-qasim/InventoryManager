@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="New Sale" FontSize="22" FontWeight="Bold" Margin="0,0,0,12"/>
+        <TextBlock Grid.Row="0" Text="New Sale" Style="{StaticResource PageTitle}"/>
 
         <!-- Notes -->
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,8">
@@ -27,7 +27,9 @@
             <ComboBox Width="200" Margin="0,0,16,0" Padding="6"
                       ItemsSource="{Binding Products}"
                       SelectedItem="{Binding SelectedProductForLine}"
-                      DisplayMemberPath="Name"/>
+                      DisplayMemberPath="Name"
+                      helpers:SearchableComboBoxHelper.IsSearchable="True"
+                      helpers:SearchableComboBoxHelper.Placeholder="Select Product..."/>
             <TextBlock Text="Qty:" VerticalAlignment="Center" Margin="0,0,8,0"/>
             <TextBox Width="60" Margin="0,0,16,0" Padding="6"
                      Text="{Binding LineQuantity, UpdateSourceTrigger=PropertyChanged}"

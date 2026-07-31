@@ -18,6 +18,8 @@ public class AppDbContext : DbContext
     public DbSet<SaleItem> SaleItems => Set<SaleItem>();
     public DbSet<StockMovement> StockMovements => Set<StockMovement>();
 
+    public DbSet<AppSettings> AppSettings => Set<AppSettings>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);

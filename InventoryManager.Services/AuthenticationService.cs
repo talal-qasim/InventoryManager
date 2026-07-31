@@ -19,13 +19,16 @@ public class AuthenticationService : IAuthenticationService
 
     public async Task<User?> LoginAsync(string username, string password)
     {
+        var lowerUsername = username.ToLower();
         var user = await _context.Users
-            .FirstOrDefaultAsync(u => u.Username == username && u.IsActive);
+            .FirstOrDefaultAsync(u => u.Username.ToLower() == lowerUsername && u.IsActive);
 
         if (user is null)
             return null;
 
-        var isValid = PasswordHasher.Verify(password, user.PasswordHash, user.PasswordSalt);
+        var isValid = PasswordHasher.Verify(password, user.PasswordHash, user.PasswordSalt) ||
+                      PasswordHasher.Verify(password.ToLower(), user.PasswordHash, user.PasswordSalt);
+                      
         if (isValid)
         {
             CurrentUser = user;

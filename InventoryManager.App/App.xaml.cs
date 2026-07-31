@@ -58,6 +58,12 @@ public partial class App : Application
                 services.AddScoped<ISaleService, SaleService>();
 
                 services.AddScoped<IDashboardService, DashboardService>();
+
+                services.AddScoped<IReportService, ReportService>();
+
+                services.AddScoped<IExportService, ExportService>();
+
+                services.AddScoped<ISettingsService, SettingsService>();
             })
             .Build();
 

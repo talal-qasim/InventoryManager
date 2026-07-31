@@ -1,12 +1,37 @@
 ﻿<UserControl x:Class="InventoryManager.App.Views.SettingsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:InventoryManager.App.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="{Binding Title}" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-    </Grid>
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel Margin="16" MaxWidth="400" HorizontalAlignment="Left">
+        <TextBlock Text="Settings" Style="{StaticResource PageTitle}"/>
+
+        <TextBlock Text="Business Name" Margin="0,0,0,4"/>
+        <TextBox Padding="6" Margin="0,0,0,12"
+                 Text="{Binding BusinessName, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock Text="Currency Symbol" Margin="0,0,0,4"/>
+        <TextBox Padding="6" Margin="0,0,0,12" Width="80" HorizontalAlignment="Left"
+                 Text="{Binding CurrencySymbol, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock Text="Default Reorder Level (for new products)" Margin="0,0,0,4"/>
+        <TextBox Padding="6" Margin="0,0,0,12" Width="80" HorizontalAlignment="Left"
+                 Text="{Binding DefaultReorderLevel, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock Text="{Binding SettingsMessage}" Foreground="Green" Margin="0,0,0,8"/>
+
+        <Button Content="Save Settings" Command="{Binding SaveSettingsCommand}" Padding="8,6" HorizontalAlignment="Left"/>
+
+        <Separator Margin="0,24,0,24"/>
+
+        <TextBlock Text="Change Password" FontSize="18" FontWeight="Bold" Margin="0,0,0,12"/>
+
+        <TextBlock Text="Current Password" Margin="0,0,0,4"/>
+        <PasswordBox x:Name="CurrentPasswordBox" Padding="6" Margin="0,0,0,12"/>
+
+        <TextBlock Text="New Password" Margin="0,0,0,4"/>
+        <PasswordBox x:Name="NewPasswordBox" Padding="6" Margin="0,0,0,12"/>
+
+        <TextBlock Text="{Binding PasswordMessage}" Foreground="Green" Margin="0,0,0,8"/>
+
+        <Button Content="Change Password" Click="ChangePasswordButton_Click" Padding="8,6" HorizontalAlignment="Left"/>
+    </StackPanel>
 </UserControl>

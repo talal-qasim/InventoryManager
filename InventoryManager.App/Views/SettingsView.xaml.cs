@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using InventoryManager.App.ViewModels;
 
-namespace InventoryManager.App.Views
+namespace InventoryManager.App.Views;
+
+public partial class SettingsView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for SettingsView.xaml
-    /// </summary>
-    public partial class SettingsView : UserControl
+    public SettingsView()
     {
-        public SettingsView()
+        InitializeComponent();
+    }
+
+    private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (DataContext is SettingsViewModel vm)
         {
-            InitializeComponent();
+            vm.CurrentPassword = CurrentPasswordBox.Password;
+            vm.NewPassword = NewPasswordBox.Password;
+            vm.ChangePasswordCommand.Execute(null);
         }
     }
 }

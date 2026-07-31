@@ -11,7 +11,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Categories" FontSize="22" FontWeight="Bold" Margin="0,0,0,16"/>
+        <TextBlock Grid.Row="0" Text="Categories" Style="{StaticResource PageTitle}"/>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,8">
             <TextBox Width="180" Margin="0,0,8,0" Padding="6" helpers:PlaceholderHelper.Placeholder="Category Name"

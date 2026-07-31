@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Primary brand -->
+    <SolidColorBrush x:Key="PrimaryBrush" Color="#4F46E5"/>
+    <SolidColorBrush x:Key="PrimaryDarkBrush" Color="#4338CA"/>
+    <SolidColorBrush x:Key="PrimaryLightBrush" Color="#EEF2FF"/>
+
+    <!-- Sidebar -->
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="#111827"/>
+    <SolidColorBrush x:Key="SidebarHoverBrush" Color="#1F2937"/>
+    <SolidColorBrush x:Key="SidebarTextBrush" Color="#E5E7EB"/>
+
+    <!-- Surfaces -->
+    <SolidColorBrush x:Key="PageBackgroundBrush" Color="#F9FAFB"/>
+    <SolidColorBrush x:Key="CardBackgroundBrush" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="#E5E7EB"/>
+
+    <!-- Text -->
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="#111827"/>
+    <SolidColorBrush x:Key="TextSecondaryBrush" Color="#6B7280"/>
+
+    <!-- Status -->
+    <SolidColorBrush x:Key="SuccessBrush" Color="#16A34A"/>
+    <SolidColorBrush x:Key="SuccessLightBrush" Color="#DCFCE7"/>
+    <SolidColorBrush x:Key="WarningBrush" Color="#D97706"/>
+    <SolidColorBrush x:Key="WarningLightBrush" Color="#FEF3C7"/>
+    <SolidColorBrush x:Key="ErrorBrush" Color="#DC2626"/>
+    <SolidColorBrush x:Key="ErrorLightBrush" Color="#FEE2E2"/>
+    <SolidColorBrush x:Key="InfoLightBrush" Color="#DBEAFE"/>
+
+</ResourceDictionary>

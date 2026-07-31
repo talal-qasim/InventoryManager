@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using InventoryManager.Core.Interfaces;
 
@@ -13,6 +13,9 @@ public partial class LoginViewModel : ObservableObject
 
     [ObservableProperty]
     private string password = string.Empty;
+
+    [ObservableProperty]
+    private bool rememberPassword;
 
     [ObservableProperty]
     private string errorMessage = string.Empty;

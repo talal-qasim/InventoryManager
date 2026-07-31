@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using InventoryManager.App.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -26,6 +26,20 @@ public partial class LoginView : Window
     private void OnLoginSucceeded(object? sender, EventArgs e)
     {
         var mainWindow = App.Services.GetRequiredService<MainWindow>();
+        mainWindow.Show();
+        Close();
+    }
+
+    private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
+    {
+        var mainWindow = App.Services.GetRequiredService<MainWindow>();
+        
+        if (mainWindow.DataContext is MainViewModel mainViewModel)
+        {
+            var settingsViewModel = App.Services.GetRequiredService<SettingsViewModel>();
+            mainViewModel.CurrentView = settingsViewModel;
+        }
+
         mainWindow.Show();
         Close();
     }
